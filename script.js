@@ -1,80 +1,42 @@
-// =========================================
-// ONLINE KOTU KOLE
-// script.js
-// =========================================
+const board=document.getElementById("board");
 
-const container = document.querySelector(".container");
-
-const PRICE = "Rs.500";
-const DATE = new Date().toISOString().split("T")[0];
-
-const TITLE = "ONLINE කොටු KOLE";
-const PLACE = "පොලොන්නරුව";
-
-const rowColors = [
-    "red",
-    "orange",
-    "green",
-    "cyan",
-    "blue",
-    "purple",
-    "pink",
-    "red",
-    "orange",
-    "green"
+const colors=[
+"red","orange","green","cyan","blue",
+"purple","pink","red","orange","green"
 ];
 
-// Load saved payment status
-let paymentStatus = JSON.parse(localStorage.getItem("paymentStatus")) || {};
+for(let i=0;i<100;i++){
 
-for (let i = 0; i < 100; i++) {
+let card=document.createElement("div");
 
-    const number = String(i).padStart(2, "0");
+let color=colors[Math.floor(i/10)];
 
-    const color = rowColors[Math.floor(i / 10)];
+let no=String(i).padStart(2,"0");
 
-    if (paymentStatus[number] === undefined) {
-        paymentStatus[number] = false;
-    }
+card.className="card "+color;
 
-    const card = document.createElement("div");
+card.innerHTML=`
 
-    card.className = `card ${color}`;
+<div class="top">
 
-    card.innerHTML = `
-        <div class="header">
-            <span class="status">${paymentStatus[number] ? "✅" : "❌"}</span>
-            <span class="price">${PRICE}</span>
-            <span class="date">${DATE}</span>
-        </div>
+${no}
 
-        <div class="number">${number}</div>
+</div>
 
-        <div class="title">${TITLE}</div>
+<div class="content">
 
-        <div class="place">${PLACE}</div>
+<div>ONLINE KOTU KOLE</div>
 
-        <div class="prize">
-            <div>3/3 = Rs.300</div>
-            <div>1/1 = Rs.100</div>
-        </div>
-    `;
+<div><b>පොලොන්නරුව</b></div>
 
-    // Click to change payment status
-    card.addEventListener("click", () => {
+<div>3/3 = 300</div>
 
-        paymentStatus[number] = !paymentStatus[number];
+<div>1/1 = 100</div>
 
-        localStorage.setItem(
-            "paymentStatus",
-            JSON.stringify(paymentStatus)
-        );
+</div>
 
-        card.querySelector(".status").textContent =
-            paymentStatus[number] ? "✅" : "❌";
+`;
 
-    });
-
-    container.appendChild(card);
+board.appendChild(card);
 
 }
