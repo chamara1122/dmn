@@ -1,295 +1,97 @@
-/* ==========================================
-   ONLINE KOTU KOLE
-========================================== */
-
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
+    font-family:Arial,Helvetica,sans-serif;
 }
 
 body{
-    background:#f2f2f2;
-    font-family:Arial, Helvetica, sans-serif;
+    background:#efe7d3;
     padding:10px;
-    overflow-x:auto;
 }
 
-/* GRID */
+.board{
 
-.container{
     display:grid;
-    grid-template-columns:repeat(10,70px);
+
+    grid-template-columns:repeat(10,1fr);
+
     gap:4px;
 
-    width:max-content;
+    max-width:1000px;
+
     margin:auto;
-    padding-bottom:10px;
+
 }
 
-/* CARD */
-
 .card{
-
-    width:70px;
-    height:100px;
 
     background:#fff;
 
+    border-radius:10px;
+
+    overflow:hidden;
+
     border:2px solid #ddd;
 
-    border-radius:8px;
+    box-shadow:0 2px 5px rgba(0,0,0,.15);
+
+}
+
+.top{
+
+    color:#fff;
+
+    text-align:center;
+
+    font-size:30px;
+
+    font-weight:bold;
 
     padding:3px;
 
-    display:flex;
-    flex-direction:column;
-    justify-content:space-between;
-
-    cursor:pointer;
-
-    transition:.2s;
-
-    box-shadow:0 2px 4px rgba(0,0,0,.15);
 }
 
-.card:hover{
+.red .top{background:#d60000;}
+.orange .top{background:#ef6c00;}
+.green .top{background:#2e7d32;}
+.cyan .top{background:#00838f;}
+.blue .top{background:#1565c0;}
+.purple .top{background:#7b1fa2;}
+.pink .top{background:#d81b60;}
 
-    transform:scale(1.03);
+.content{
 
-    box-shadow:0 4px 8px rgba(0,0,0,.25);
-}
+    padding:5px;
 
-/* HEADER */
+    font-size:10px;
 
-.header{
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-    font-size:6px;
-
-    font-weight:bold;
-}
-
-.status{
-
-    font-size:9px;
-}
-
-.price{
-
-    color:#d50000;
-}
-
-.date{
-
-    color:#666;
-}
-
-/* NUMBER */
-
-.number{
-
-    text-align:center;
-
-    font-size:24px;
-
-    font-weight:bold;
-
-    line-height:1;
-
-    color:#111;
-}
-
-/* TITLE */
-
-.title{
-
-    text-align:center;
-
-    font-size:7px;
-
-    font-weight:bold;
-}
-
-/* PLACE */
-
-.place{
-
-    text-align:center;
-
-    font-size:6px;
-
-    color:#666;
-}
-
-/* PRIZE */
-
-.prize{
-
-    text-align:center;
-
-    font-size:6px;
-
-    font-weight:bold;
-
-    line-height:1.2;
-}
-
-/* COLORS */
-
-.red{
-    border-color:#ff6b6b;
-}
-.red .number{
-    color:#d50000;
-}
-
-.orange{
-    border-color:#ffb74d;
-}
-.orange .number{
-    color:#ef6c00;
-}
-
-.green{
-    border-color:#66bb6a;
-}
-.green .number{
-    color:#2e7d32;
-}
-
-.cyan{
-    border-color:#4dd0e1;
-}
-.cyan .number{
-    color:#00838f;
-}
-
-.blue{
-    border-color:#64b5f6;
-}
-.blue .number{
-    color:#1565c0;
-}
-
-.purple{
-    border-color:#ba68c8;
-}
-.purple .number{
-    color:#7b1fa2;
-}
-
-.pink{
-    border-color:#f06292;
-}
-.pink .number{
-    color:#d81b60;
-}
-
-/* TABLET */
-
-@media(max-width:768px){
-
-body{
-
-padding:5px;
+    line-height:1.5;
 
 }
 
-.container{
+.content b{
 
-grid-template-columns:repeat(10,70px);
+    color:#222;
 
-gap:3px;
+}
+
+@media(max-width:900px){
+
+.board{
+
+grid-template-columns:repeat(5,1fr);
 
 }
 
 }
 
-/* MOBILE */
+@media(max-width:600px){
 
-@media(max-width:480px){
+.board{
 
-body{
+grid-template-columns:repeat(3,1fr);
 
-padding:3px;
-
-}
-
-.container{
-
-grid-template-columns:repeat(10,65px);
-
-gap:3px;
-
-}
-
-.card{
-
-width:65px;
-height:95px;
-padding:2px;
-
-}
-
-.header{
-
-font-size:5px;
-
-}
-
-.status{
-
-font-size:8px;
-
-}
-
-.number{
-
-font-size:22px;
-
-}
-
-.title{
-
-font-size:6px;
-
-}
-
-.place{
-
-font-size:5px;
-
-}
-
-.prize{
-
-font-size:5px;
-
-}
-
-}
-
-/* PRINT */
-
-@media print{
-
-body{
-background:#fff;
-padding:0;
-}
-
-.container{
-gap:2px;
-}
-
-.card{
-box-shadow:none;
 }
 
 }
