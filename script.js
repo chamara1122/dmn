@@ -1,42 +1,252 @@
-const board=document.getElementById("board");
+// ==========================================
+// ONLINE KOTU KOLE
+// script.js
+// ==========================================
 
-const colors=[
-"red","orange","green","cyan","blue",
-"purple","pink","red","orange","green"
+const board = document.getElementById("board");
+
+// Row Colors
+const rowColors = [
+    "red",
+    "orange",
+    "green",
+    "cyan",
+    "blue",
+    "purple",
+    "pink",
+    "red",
+    "orange",
+    "green"
 ];
+
+// Card Data
+const data = {
+
+    "00":[
+        "👤 Thinushi (5)"
+    ],
+
+    "01":[
+        "② Priyadarshana",
+        "③ Moon"
+    ],
+
+    "05":[
+        "⑤ 0712474616"
+    ],
+
+    "09":[
+        "③ Moon",
+        "② Priyadarshana"
+    ],
+
+    "14":[
+        "② 0712474616"
+    ],
+
+    "19":[
+        "⑤ Priyadarshana"
+    ],
+
+    "22":[
+        "② Priyadarshana"
+    ],
+
+    "24":[
+        "⑤ Moon"
+    ],
+
+    "27":[
+        "② Moon"
+    ],
+
+    "33":[
+        "② Moon"
+    ],
+
+    "35":[
+        "③ Moon"
+    ],
+
+    "36":[
+        "⑤ Thusitha"
+    ],
+
+    "37":[
+        "⑤ Gayan"
+    ],
+
+    "38":[
+        "② 0712474616"
+    ],
+
+    "40":[
+        "② Moon"
+    ],
+
+    "41":[
+        "② 0712474616"
+    ],
+
+    "42":[
+        "⑤ Moon"
+    ],
+
+    "46":[
+        "⑤ Thusitha"
+    ],
+
+    "48":[
+        "⑤ Arakshi"
+    ],
+
+    "50":[
+        "② Moon"
+    ],
+
+    "52":[
+        "⑤ Moon"
+    ],
+
+    "53":[
+        "⑤ Moon"
+    ],
+
+    "55":[
+        "⑤ M"
+    ],
+
+    "59":[
+        "⑤ M"
+    ],
+
+    "62":[
+        "② Priyadarshana"
+    ],
+
+    "63":[
+        "⑤ Thusitha"
+    ],
+
+    "66":[
+        "② Priyadarshana"
+    ],
+
+    "67":[
+        "⑤ Soni"
+    ],
+
+    "70":[
+        "② M"
+    ],
+
+    "73":[
+        "⑤ Pahan"
+    ],
+
+    "74":[
+        "⑤ Dushitha"
+    ],
+
+    "76":[
+        "③ 0712474616",
+        "② Dushitha"
+    ],
+
+    "77":[
+        "② Priyadarshana",
+        "② 0712474616"
+    ],
+
+    "79":[
+        "⑤ Kasun"
+    ],
+
+    "80":[
+        "⑤ Thusitha"
+    ],
+
+    "81":[
+        "⑤ Chamara"
+    ],
+
+    "82":[
+        "⑤ Kasun"
+    ],
+
+    "85":[
+        "② 0712474616",
+        "② Priyadarshana"
+    ],
+
+    "86":[
+        "③ 0712474616"
+    ],
+
+    "88":[
+        "⑤ Dushitha"
+    ],
+
+    "89":[
+        "⑤ Kasun"
+    ],
+
+    "92":[
+        "⑤ Buddharakkha"
+    ],
+
+    "95":[
+        "⑤ Dushitha Seetha"
+    ],
+
+    "97":[
+        "② M"
+    ],
+
+    "99":[
+        "⑤ M"
+    ]
+
+};
+
+// Generate 00-99
 
 for(let i=0;i<100;i++){
 
-let card=document.createElement("div");
+    const no = String(i).padStart(2,"0");
 
-let color=colors[Math.floor(i/10)];
+    const color = rowColors[Math.floor(i/10)];
 
-let no=String(i).padStart(2,"0");
+    const card = document.createElement("div");
 
-card.className="card "+color;
+    card.className = `card ${color}`;
 
-card.innerHTML=`
+    let html = "";
 
-<div class="top">
+    if(data[no]){
 
-${no}
+        data[no].forEach(item=>{
 
-</div>
+            html += `<div class="line">${item}</div>`;
 
-<div class="content">
+        });
 
-<div>ONLINE KOTU KOLE</div>
+    }else{
 
-<div><b>පොලොන්නරුව</b></div>
+        html = `<div class="line">Available</div>`;
 
-<div>3/3 = 300</div>
+    }
 
-<div>1/1 = 100</div>
+    card.innerHTML = `
+        <div class="top">${no}</div>
 
-</div>
+        <div class="content">
 
-`;
+            ${html}
 
-board.appendChild(card);
+        </div>
+    `;
+
+    board.appendChild(card);
 
 }
