@@ -237,3 +237,162 @@ font-size:6px;
 }
 
 }
+
+/* ==========================================
+   PART 4 - PROFESSIONAL DESIGN
+========================================== */
+
+/* Card Hover */
+.card:hover{
+    transform:translateY(-3px) scale(1.02);
+    box-shadow:0 8px 18px rgba(0,0,0,.25);
+}
+
+/* Number Header */
+.top{
+    font-family:Impact, Arial Black, sans-serif;
+    letter-spacing:1px;
+    border-bottom:2px solid rgba(255,255,255,.3);
+}
+
+/* Content */
+.content{
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    gap:3px;
+    height:calc(100% - 30px);
+}
+
+/* Data Line */
+.line{
+    background:#f8f8f8;
+    border-radius:4px;
+    padding:2px 4px;
+    font-size:10px;
+    color:#222;
+    font-weight:600;
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+}
+
+/* Empty Card */
+.available{
+    color:#999;
+    font-style:italic;
+    text-align:center;
+    margin-top:20px;
+}
+
+/* Scroll Bar */
+::-webkit-scrollbar{
+    height:8px;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#999;
+    border-radius:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#eee;
+}
+
+/* Desktop */
+@media (min-width:1200px){
+
+    .board{
+        grid-template-columns:repeat(10,100px);
+        gap:6px;
+    }
+
+    .card{
+        width:100px;
+        height:125px;
+    }
+
+    .top{
+        font-size:24px;
+    }
+
+    .line{
+        font-size:10px;
+    }
+}
+
+/* Tablet */
+@media (max-width:992px){
+
+    .board{
+        grid-template-columns:repeat(10,85px);
+    }
+
+    .card{
+        width:85px;
+        height:110px;
+    }
+
+    .top{
+        font-size:20px;
+    }
+
+    .line{
+        font-size:8px;
+    }
+}
+
+/* Mobile */
+@media (max-width:576px){
+
+    body{
+        padding:5px;
+    }
+
+    .wrapper{
+        overflow-x:auto;
+    }
+
+    .board{
+        grid-template-columns:repeat(10,75px);
+        gap:4px;
+        width:max-content;
+    }
+
+    .card{
+        width:75px;
+        height:100px;
+    }
+
+    .top{
+        font-size:18px;
+        height:26px;
+    }
+
+    .content{
+        padding:3px;
+    }
+
+    .line{
+        font-size:7px;
+        padding:2px;
+    }
+}
+
+/* Print */
+@media print{
+
+    body{
+        background:#fff;
+        padding:0;
+    }
+
+    .board{
+        gap:3px;
+    }
+
+    .card{
+        box-shadow:none;
+        break-inside:avoid;
+    }
+}
