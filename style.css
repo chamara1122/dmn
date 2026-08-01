@@ -1,6 +1,6 @@
-/* ==========================================
-   RESET
-========================================== */
+/*=========================================
+  RESET
+=========================================*/
 
 *{
     margin:0;
@@ -9,17 +9,38 @@
 }
 
 body{
-    background:#efe5c8;
     font-family:Arial,Helvetica,sans-serif;
-    padding:10px;
+    background:#e9dfc6;
+    padding:15px;
 }
 
-/* ==========================================
-   BOARD
-========================================== */
+/*=========================================
+  HEADER
+=========================================*/
+
+.header{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.header h1{
+    font-size:34px;
+    color:#d40000;
+    font-weight:900;
+    letter-spacing:1px;
+}
+
+.header p{
+    color:#444;
+    font-size:18px;
+    margin-top:5px;
+}
+
+/*=========================================
+  BOARD
+=========================================*/
 
 .wrapper{
-    width:100%;
     overflow-x:auto;
 }
 
@@ -29,156 +50,243 @@ body{
 
     grid-template-columns:repeat(10,95px);
 
-    gap:6px;
+    gap:8px;
 
     width:max-content;
 
     margin:auto;
 
-    padding:5px;
 }
 
-/* ==========================================
-   CARD
-========================================== */
+/*=========================================
+  CARD
+=========================================*/
 
 .card{
 
     width:95px;
 
-    height:118px;
+    min-height:130px;
 
     background:#fff;
-
-    border:2px solid #ddd;
 
     border-radius:10px;
 
     overflow:hidden;
 
-    box-shadow:0 2px 6px rgba(0,0,0,.18);
+    border:2px solid #ddd;
 
-    transition:.2s;
+    box-shadow:0 3px 8px rgba(0,0,0,.18);
+
+    transition:.25s;
+
 }
 
 .card:hover{
 
-    transform:translateY(-2px);
+    transform:translateY(-4px);
 
-    box-shadow:0 5px 12px rgba(0,0,0,.25);
+    box-shadow:0 8px 16px rgba(0,0,0,.28);
 
 }
 
-/* ==========================================
-   NUMBER BAR
-========================================== */
+/*=========================================
+  NUMBER BAR
+=========================================*/
 
 .top{
 
-    height:30px;
+    height:34px;
 
     display:flex;
 
-    justify-content:center;
-
     align-items:center;
 
-    font-size:22px;
+    justify-content:center;
 
-    font-weight:bold;
+    font-size:26px;
+
+    font-weight:900;
 
     color:#fff;
 
-    text-shadow:1px 1px 2px rgba(0,0,0,.4);
+    text-shadow:1px 1px 2px rgba(0,0,0,.35);
+
 }
 
-/* ==========================================
-   CONTENT
-========================================== */
+/*=========================================
+  CONTENT
+=========================================*/
 
 .content{
 
-    padding:4px;
+    padding:6px;
 
-    font-size:8px;
+    font-size:10px;
 
-    line-height:1.35;
+    line-height:1.5;
+
 }
 
 .line{
 
-    margin-bottom:3px;
-}
+    background:#f6f6f6;
 
-.name{
+    border-radius:4px;
+
+    padding:2px 4px;
+
+    margin-bottom:3px;
 
     font-weight:bold;
 
     color:#333;
+
 }
 
-/* ==========================================
-   ROW COLORS
-========================================== */
+.empty{
+
+    text-align:center;
+
+    color:#aaa;
+
+    font-style:italic;
+
+    margin-top:35px;
+
+}
+
+/*=========================================
+  COLORS
+=========================================*/
 
 .red{
-    border-color:#ff7b7b;
+    border-color:#ef5350;
 }
 .red .top{
     background:#d50000;
 }
 
 .orange{
-    border-color:#ffbe55;
+    border-color:#ffa726;
 }
 .orange .top{
     background:#ef6c00;
 }
 
 .green{
-    border-color:#73d177;
+    border-color:#66bb6a;
 }
 .green .top{
     background:#2e7d32;
 }
 
 .cyan{
-    border-color:#66e2e2;
+    border-color:#26c6da;
 }
 .cyan .top{
-    background:#0097a7;
+    background:#00838f;
 }
 
 .blue{
-    border-color:#74b6ff;
+    border-color:#42a5f5;
 }
 .blue .top{
     background:#1565c0;
 }
 
 .purple{
-    border-color:#c08dff;
+    border-color:#ab47bc;
 }
 .purple .top{
     background:#7b1fa2;
 }
 
 .pink{
-    border-color:#ff9bc4;
+    border-color:#ec407a;
 }
 .pink .top{
     background:#d81b60;
 }
 
-/* ==========================================
-   MOBILE
-========================================== */
+/*=========================================
+  FOOTER
+=========================================*/
 
-@media(max-width:768px){
+.footer{
+    margin-top:20px;
+    text-align:center;
+}
+
+.legend{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    font-size:15px;
+    font-weight:bold;
+}
+
+.taken{
+    color:#2e7d32;
+}
+
+.available{
+    color:#777;
+}
+
+/*=========================================
+  TABLET
+=========================================*/
+
+@media(max-width:900px){
 
 .board{
 
 grid-template-columns:repeat(10,82px);
+
+gap:5px;
+
+}
+
+.card{
+
+width:82px;
+
+min-height:118px;
+
+}
+
+.top{
+
+font-size:22px;
+
+height:30px;
+
+}
+
+.content{
+
+font-size:8px;
+
+}
+
+}
+
+/*=========================================
+  MOBILE
+=========================================*/
+
+@media(max-width:600px){
+
+body{
+
+padding:8px;
+
+}
+
+.board{
+
+grid-template-columns:repeat(10,72px);
 
 gap:4px;
 
@@ -186,213 +294,32 @@ gap:4px;
 
 .card{
 
-width:82px;
-height:108px;
+width:72px;
+
+min-height:105px;
 
 }
 
 .top{
 
-font-size:20px;
 height:28px;
+
+font-size:20px;
 
 }
 
 .content{
+
+padding:4px;
 
 font-size:7px;
 
 }
 
-}
-
-@media(max-width:480px){
-
-.board{
-
-grid-template-columns:repeat(10,74px);
-
-gap:3px;
-
-}
-
-.card{
-
-width:74px;
-height:100px;
-
-}
-
-.top{
-
-font-size:18px;
-height:26px;
-
-}
-
-.content{
-
-font-size:6px;
-
-}
-
-}
-
-/* ==========================================
-   PART 4 - PROFESSIONAL DESIGN
-========================================== */
-
-/* Card Hover */
-.card:hover{
-    transform:translateY(-3px) scale(1.02);
-    box-shadow:0 8px 18px rgba(0,0,0,.25);
-}
-
-/* Number Header */
-.top{
-    font-family:Impact, Arial Black, sans-serif;
-    letter-spacing:1px;
-    border-bottom:2px solid rgba(255,255,255,.3);
-}
-
-/* Content */
-.content{
-    display:flex;
-    flex-direction:column;
-    justify-content:flex-start;
-    gap:3px;
-    height:calc(100% - 30px);
-}
-
-/* Data Line */
 .line{
-    background:#f8f8f8;
-    border-radius:4px;
-    padding:2px 4px;
-    font-size:10px;
-    color:#222;
-    font-weight:600;
-    overflow:hidden;
-    white-space:nowrap;
-    text-overflow:ellipsis;
+
+padding:2px;
+
 }
 
-/* Empty Card */
-.available{
-    color:#999;
-    font-style:italic;
-    text-align:center;
-    margin-top:20px;
-}
-
-/* Scroll Bar */
-::-webkit-scrollbar{
-    height:8px;
-}
-
-::-webkit-scrollbar-thumb{
-    background:#999;
-    border-radius:10px;
-}
-
-::-webkit-scrollbar-track{
-    background:#eee;
-}
-
-/* Desktop */
-@media (min-width:1200px){
-
-    .board{
-        grid-template-columns:repeat(10,100px);
-        gap:6px;
-    }
-
-    .card{
-        width:100px;
-        height:125px;
-    }
-
-    .top{
-        font-size:24px;
-    }
-
-    .line{
-        font-size:10px;
-    }
-}
-
-/* Tablet */
-@media (max-width:992px){
-
-    .board{
-        grid-template-columns:repeat(10,85px);
-    }
-
-    .card{
-        width:85px;
-        height:110px;
-    }
-
-    .top{
-        font-size:20px;
-    }
-
-    .line{
-        font-size:8px;
-    }
-}
-
-/* Mobile */
-@media (max-width:576px){
-
-    body{
-        padding:5px;
-    }
-
-    .wrapper{
-        overflow-x:auto;
-    }
-
-    .board{
-        grid-template-columns:repeat(10,75px);
-        gap:4px;
-        width:max-content;
-    }
-
-    .card{
-        width:75px;
-        height:100px;
-    }
-
-    .top{
-        font-size:18px;
-        height:26px;
-    }
-
-    .content{
-        padding:3px;
-    }
-
-    .line{
-        font-size:7px;
-        padding:2px;
-    }
-}
-
-/* Print */
-@media print{
-
-    body{
-        background:#fff;
-        padding:0;
-    }
-
-    .board{
-        gap:3px;
-    }
-
-    .card{
-        box-shadow:none;
-        break-inside:avoid;
-    }
 }
