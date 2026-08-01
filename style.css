@@ -10,36 +10,37 @@
 
 body{
     background:#f2f2f2;
-    font-family:Arial,Helvetica,sans-serif;
+    font-family:Arial, Helvetica, sans-serif;
     padding:10px;
+    overflow-x:auto;
 }
 
 /* GRID */
 
 .container{
-    max-width:1100px;
-    margin:auto;
-
     display:grid;
-    grid-template-columns:repeat(10,95px);
-    gap:6px;
-    justify-content:center;
+    grid-template-columns:repeat(10,70px);
+    gap:4px;
+
+    width:max-content;
+    margin:auto;
+    padding-bottom:10px;
 }
 
 /* CARD */
 
 .card{
 
-    width:95px;
-    height:125px;
+    width:70px;
+    height:100px;
 
     background:#fff;
 
     border:2px solid #ddd;
 
-    border-radius:10px;
+    border-radius:8px;
 
-    padding:5px;
+    padding:3px;
 
     display:flex;
     flex-direction:column;
@@ -49,14 +50,14 @@ body{
 
     transition:.2s;
 
-    box-shadow:0 2px 5px rgba(0,0,0,.15);
+    box-shadow:0 2px 4px rgba(0,0,0,.15);
 }
 
 .card:hover{
 
-    transform:translateY(-2px);
+    transform:scale(1.03);
 
-    box-shadow:0 5px 12px rgba(0,0,0,.25);
+    box-shadow:0 4px 8px rgba(0,0,0,.25);
 }
 
 /* HEADER */
@@ -69,14 +70,14 @@ body{
 
     align-items:center;
 
-    font-size:8px;
+    font-size:6px;
 
     font-weight:bold;
 }
 
 .status{
 
-    font-size:12px;
+    font-size:9px;
 }
 
 .price{
@@ -93,19 +94,15 @@ body{
 
 .number{
 
-    flex:1;
+    text-align:center;
 
-    display:flex;
+    font-size:24px;
 
-    justify-content:center;
-
-    align-items:center;
-
-    font-size:34px;
-
-    font-weight:900;
+    font-weight:bold;
 
     line-height:1;
+
+    color:#111;
 }
 
 /* TITLE */
@@ -114,11 +111,9 @@ body{
 
     text-align:center;
 
-    font-size:10px;
+    font-size:7px;
 
     font-weight:bold;
-
-    color:#111;
 }
 
 /* PLACE */
@@ -127,11 +122,9 @@ body{
 
     text-align:center;
 
-    font-size:9px;
+    font-size:6px;
 
     color:#666;
-
-    margin-top:2px;
 }
 
 /* PRIZE */
@@ -140,19 +133,17 @@ body{
 
     text-align:center;
 
-    font-size:8px;
+    font-size:6px;
 
     font-weight:bold;
 
-    line-height:1.4;
-
-    margin-top:4px;
+    line-height:1.2;
 }
 
-/* ROW COLORS */
+/* COLORS */
 
 .red{
-    border-color:#ff6666;
+    border-color:#ff6b6b;
 }
 .red .number{
     color:#d50000;
@@ -200,73 +191,85 @@ body{
     color:#d81b60;
 }
 
-/* MOBILE */
-
-@media(max-width:1100px){
-
-.container{
-
-grid-template-columns:repeat(5,95px);
-
-}
-
-}
+/* TABLET */
 
 @media(max-width:768px){
 
+body{
+
+padding:5px;
+
+}
+
 .container{
 
-grid-template-columns:repeat(3,95px);
+grid-template-columns:repeat(10,70px);
+
+gap:3px;
 
 }
 
 }
 
-@media(max-width:500px){
+/* MOBILE */
+
+@media(max-width:480px){
+
+body{
+
+padding:3px;
+
+}
 
 .container{
 
-grid-template-columns:repeat(2,90px);
+grid-template-columns:repeat(10,65px);
 
-gap:5px;
+gap:3px;
 
 }
 
 .card{
 
-width:90px;
-height:120px;
-padding:4px;
+width:65px;
+height:95px;
+padding:2px;
 
 }
 
 .header{
 
-font-size:7px;
+font-size:5px;
 
 }
 
-.number{
-
-font-size:30px;
-
-}
-
-.title{
-
-font-size:9px;
-
-}
-
-.place{
+.status{
 
 font-size:8px;
 
 }
 
+.number{
+
+font-size:22px;
+
+}
+
+.title{
+
+font-size:6px;
+
+}
+
+.place{
+
+font-size:5px;
+
+}
+
 .prize{
 
-font-size:7px;
+font-size:5px;
 
 }
 
@@ -277,25 +280,16 @@ font-size:7px;
 @media print{
 
 body{
-
 background:#fff;
-
 padding:0;
-
 }
 
 .container{
-
-gap:4px;
-
+gap:2px;
 }
 
 .card{
-
 box-shadow:none;
-
-break-inside:avoid;
-
 }
 
 }
