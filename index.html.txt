@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Basic -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO -->
+    <title>GIMHAN STORE 2026 | Premium eCommerce</title>
+    <meta name="description" content="Premium Dark Glass UI eCommerce Website">
+    <meta name="keywords" content="Gimhan Store, eCommerce, Shopping, Sri Lanka">
+    <meta name="author" content="GIMHAN STORE">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- AOS -->
+    <link rel="stylesheet"
+        href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+
+    <!-- Swiper -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+
+    <!-- ========================= -->
+    <!-- Background Effects -->
+    <!-- ========================= -->
+
+    <div class="animated-bg"></div>
+
+    <!-- ========================= -->
+    <!-- Header -->
+    <!-- ========================= -->
+
+    <header class="header">
+
+        <div class="container">
+
+            <!-- Logo -->
+            <a href="index.html" class="logo">
+                <span>GIMHAN</span> STORE
+            </a>
+
+            <!-- Navigation -->
+            <nav class="navbar">
+
+                <a href="#" class="active">Home</a>
+                <a href="#">Products</a>
+                <a href="#">Categories</a>
+                <a href="#">Flash Sale</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+
+            </nav>
+
+            <!-- Search -->
+            <div class="search-box">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    type="text"
+                    placeholder="AI Search Products...">
+
+            </div>
+
+            <!-- Right Icons -->
+
+            <div class="header-icons">
+
+                <button class="icon-btn">
+                    <i class="fa-solid fa-microphone"></i>
+                </button>
+
+                <button class="icon-btn">
+                    <i class="fa-solid fa-camera"></i>
+                </button>
+
+                <button class="icon-btn">
+                    <i class="fa-regular fa-heart"></i>
+                </button>
+
+                <button class="icon-btn">
+                    <i class="fa-regular fa-bell"></i>
+                </button>
+
+                <button class="icon-btn cart">
+
+                    <i class="fa-solid fa-cart-shopping"></i>
+
+                    <span class="badge">0</span>
+
+                </button>
+
+                <button class="icon-btn">
+
+                    <i class="fa-regular fa-user"></i>
+
+                </button>
+
+            </div>
+
+            <!-- Mobile Menu -->
+
+            <button class="menu-toggle">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+        </div>
+
+    </header>
+
+    <!-- ========================= -->
+    <!-- Main -->
+    <!-- ========================= -->
+
+    <main>
+
+        <!-- Hero Section -->
+        <section class="hero">
+
+            <div class="container">
+
+                <h1 data-aos="fade-up">
+                    Welcome to
+                    <span>GIMHAN STORE</span>
+                </h1>
+
+                <p data-aos="fade-up" data-aos-delay="200">
+
+                    Premium Dark Glass UI eCommerce Website
+
+                </p>
+
+                <button class="shop-btn" data-aos="zoom-in">
+
+                    Shop Now
+
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- ========================= -->
+    <!-- Footer -->
+    <!-- ========================= -->
+
+    <footer>
+
+    </footer>
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+
+    <!-- Swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <!-- App -->
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>
