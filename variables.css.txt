@@ -1,0 +1,146 @@
+/* ==========================================
+   GIMHAN STORE 2026
+   File : variables.css
+   ========================================== */
+
+:root {
+
+    /* ===============================
+       COLORS
+    =============================== */
+
+    --bg-color: #050816;
+    --bg-secondary: #0d1224;
+    --surface: rgba(255, 255, 255, 0.08);
+    --surface-hover: rgba(255, 255, 255, 0.12);
+
+    --glass: rgba(255,255,255,.08);
+    --glass-border: rgba(255,255,255,.15);
+
+    --primary: #ff7a00;
+    --secondary: #8b5cf6;
+    --accent: #00c8ff;
+
+    --success: #00d26a;
+    --warning: #ffd43b;
+    --danger: #ff4d4d;
+
+    --white: #ffffff;
+    --text: #ffffff;
+    --text-light: #c7c7c7;
+    --text-muted: #8d93ab;
+
+    /* ===============================
+       GRADIENTS
+    =============================== */
+
+    --gradient-primary: linear-gradient(135deg,#ff7a00,#ffb347);
+
+    --gradient-purple: linear-gradient(135deg,#8b5cf6,#6d28d9);
+
+    --gradient-blue: linear-gradient(135deg,#00c8ff,#0077ff);
+
+    --gradient-dark: linear-gradient(135deg,#050816,#121a34);
+
+    /* ===============================
+       FONTS
+    =============================== */
+
+    --font-heading: "Outfit", sans-serif;
+    --font-body: "Poppins", sans-serif;
+
+    /* ===============================
+       FONT SIZE
+    =============================== */
+
+    --fs-xs: .75rem;
+    --fs-sm: .875rem;
+    --fs-md: 1rem;
+    --fs-lg: 1.125rem;
+    --fs-xl: 1.5rem;
+    --fs-2xl: 2rem;
+    --fs-3xl: 3rem;
+
+    /* ===============================
+       FONT WEIGHT
+    =============================== */
+
+    --fw-light:300;
+    --fw-normal:400;
+    --fw-medium:500;
+    --fw-semibold:600;
+    --fw-bold:700;
+    --fw-extra:800;
+
+    /* ===============================
+       BORDER RADIUS
+    =============================== */
+
+    --radius-sm:8px;
+    --radius-md:14px;
+    --radius-lg:20px;
+    --radius-xl:30px;
+    --radius-full:999px;
+
+    /* ===============================
+       SPACING
+    =============================== */
+
+    --space-xs:6px;
+    --space-sm:10px;
+    --space-md:16px;
+    --space-lg:24px;
+    --space-xl:40px;
+    --space-2xl:60px;
+
+    /* ===============================
+       SHADOWS
+    =============================== */
+
+    --shadow-sm:0 5px 15px rgba(0,0,0,.15);
+
+    --shadow-md:0 10px 30px rgba(0,0,0,.30);
+
+    --shadow-lg:0 20px 50px rgba(0,0,0,.45);
+
+    --glow-orange:0 0 20px rgba(255,122,0,.45);
+
+    --glow-purple:0 0 25px rgba(139,92,246,.45);
+
+    --glow-blue:0 0 25px rgba(0,200,255,.45);
+
+    /* ===============================
+       GLASS BLUR
+    =============================== */
+
+    --blur:18px;
+
+    /* ===============================
+       TRANSITIONS
+    =============================== */
+
+    --transition-fast:.25s ease;
+
+    --transition:.4s ease;
+
+    --transition-slow:.7s ease;
+
+    /* ===============================
+       HEADER
+    =============================== */
+
+    --header-height:80px;
+
+    --container-width:1400px;
+
+    /* ===============================
+       Z INDEX
+    =============================== */
+
+    --z-loader:9999;
+    --z-modal:999;
+    --z-header:100;
+    --z-dropdown:90;
+    --z-tooltip:80;
+
+}
